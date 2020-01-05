@@ -1,3 +1,9 @@
 1- git init
 2- creating/modifying/etc
 3- git add <file>/<.>
+4- git commit 
+	or 
+   git commit -m "<message>"
+git commit will open a text editor (I think it is nano)
+
+
