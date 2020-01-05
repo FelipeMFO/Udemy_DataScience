@@ -11,3 +11,5 @@
 
 
 ![./stages.png](States)
+
+- git diff HEAD~<n> #Compare the different commits, n is the nth last commit
