@@ -1,6 +1,7 @@
 1- git init
 2- creating/modifying/etc
 3- git add <file>/<.>
+   git checkout -- <file> # Undo the changes
 4- git commit 
 	or 
    git commit -m "<message>"
