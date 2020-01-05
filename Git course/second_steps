@@ -1,0 +1,4 @@
+1- Create a new repository on Github.com
+2- git remote add origin <link>
+3- git push -u origin master
+	-> After that you only need to git push
