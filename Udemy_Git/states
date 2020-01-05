@@ -1,0 +1,13 @@
+-Untracked (Não monitorado)
+	-> Original File
+-Modified (Modificado)
+	-> When it's modified
+-Staged (Preparado)
+	-> When it's added by git add
+	Git maintains an area where the files added stay until the commit
+-Commited (Consolidado)
+	-> After the commit, it's registered on the repo
+
+
+
+![./stages.png](States)
