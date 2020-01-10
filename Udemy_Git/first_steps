@@ -7,4 +7,12 @@
    git commit -m "<message>"
 git commit will open a text editor (I think it is nano)
 
+5- Create a new repository on Github.com
+6- git remote add origin <link>
+7- git push -u origin master #Envia os commits de uma Branch pro repositório remoto se não detectar conflitos
+	-> First time: git push -u origin master
+	   Then: git push <remote> <branch>
+	-> After that you only need to git push
+8- Add a README.md (md is markdown)
 
+** git config --global core.editor #To change the editor

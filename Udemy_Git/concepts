@@ -1,0 +1,67 @@
+States:
+
+	-Untracked (Não monitorado)
+		-> Original File
+	-Modified (Modificado)
+		-> When it's modified
+	-Staged (Preparado)
+		-> When it's added by git add
+		Git maintains an area where the files added stay until the commit
+	-Commited (Consolidado)
+		-> After the commit, it's registered on the repo
+
+
+Adding images to README:
+
+	!<file path>(<description>)
+	E.G. : ![./stages.png](States) 
+
+
+Diff:
+	git diff HEAD~<n> #Compare the different commits, n is the nth last commit
+
+
+Collaborators:
+
+	People who can push into your repository, otherwise, people can only fork.
+
+Checkout:
+
+	Seeing how a specific file or all the repository were at a certain commit
+	git checkout <commit> <file>
+	This <commit> can be the first digits of the commit code that you can see at git log
+
+
+	git checkout -- <path_or_file>
+		-> Desfaz todas as alterações que não estejam no Stage (quando deu add) desde o último commit
+
+	git checkout HEAD -- <path_or_file> 			git checkout HEAD~n #undo to the nth last commit
+		-> Desfaz todas as alterações desde o último commit incluindo o Stage
+
+
+Reset:
+	
+	git reset <commit>
+		-> Reset the repo to a certain commit
+	
+	git reset -- hard <commit>
+		-> Reset and remove all the alterations, it's like you've erased that commit
+
+	O --soft é o padrão que pega as alterações e deixa como está, já o --hard além de apagar o commit vai voltar pro estado do commit anterior
+
+
+Revert:
+
+	git revert <commit>
+		-> Make a new commit undoing all the alterations from the specified commit
+		-> Useful for undoing an old commit
+
+Branch:
+
+	-> It's a list of commits
+	git branch -> Shows which branch you are
+	git branch <new_branch> #creates a new branch
+	git branch -d <branch> #delete a branch
+
+	Use the command checkout to change to a branch. E a partir desse momento os commits vão ser jogados nessa branch e não na Master
+	
