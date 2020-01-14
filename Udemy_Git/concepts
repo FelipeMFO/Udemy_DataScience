@@ -65,3 +65,12 @@ Branch:
 
 	Use the command checkout to change to a branch. E a partir desse momento os commits vão ser jogados nessa branch e não na Master
 	
+
+Merge:
+	-> Aplica os commits de uma branch na branch atual, caso existam commits na branch atual que não estão na outra será criado um commit de merge (verificando conflitos e etc)
+
+	git merge <outra_branch> #Estando na branch atual (na master por exemplo)
+
+Rebase:
+	-> Ele rebaseia a linha de commits, funciona como um merge mas ao invés de na linha do projeto juntar ambas as branchs com um commit de merge (em paralelo), ele serializa os commits. Continua acionando os conflitos.
+	-> Útil usar quando não foram feitas muitas mudanças nos mesmos arquivos entre as duas branchs.
