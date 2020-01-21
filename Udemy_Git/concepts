@@ -74,3 +74,57 @@ Merge:
 Rebase:
 	-> Ele rebaseia a linha de commits, funciona como um merge mas ao invés de na linha do projeto juntar ambas as branchs com um commit de merge (em paralelo), ele serializa os commits. Continua acionando os conflitos.
 	-> Útil usar quando não foram feitas muitas mudanças nos mesmos arquivos entre as duas branchs.
+	-> Antes pode se ver uma branch solta. Caso vá para a master (por ex) e de rebase, depois do push, os commits da branch solta aparecem na branch master.
+
+Fetch:
+	git fetch
+	-> Baixa as atualizações do repositório remote porém não aplica elas no repositório 
+	-> Pull = Fetch + Merge. Já da o Merge automaticamente, fazer Fetch e Rebase é melhor pois mantem o histórico do desenvolvimento. (Vai ter vários commits atrasados e mais as modificações, ai o Rebase conserva os commits).
+	-> Permite fazer o rebase de uma branch ao invés de um merge.
+
+Tag:
+	-> A Tag guarda o estado do repositório naquele ponto, é útil pra definier versões estáveis do projeto.
+
+Fork:
+	-> Vocé copia o repositório de outro usuário para o seu usuário no GitHub
+	-> Semelhante a Branch porém não recebe mais commits.
+
+Git Ignore:
+
+	.gitignore
+
+		.extension
+
+		folder1/
+		folder2/
+		
+		**/*.extension # Any extension coming from any path
+
+Git Stash: 	
+
+	-> Guarda as alterações do Working Directory
+	-> Permite fazer rebase, merge, trocar de branch sem a necessidade de commitar.
+
+	git stash list
+	git stash pop # Aplica o último stash armazenado
+
+	-> Evitar ficar usando stash em cima de stash, mesmo que se possa fazer.
+
+Git Cherrypick:
+
+	git cherrypick <commit>
+
+	-> Aplica as alterações de um commit na branch atual
+	-> Cria um novo commit com essas alterações
+	-> Pode ser um bug fix descober em uma versão x+n que vai ser aplicada na versão x.
+
+Git Blame:
+
+	-> Mostra as alterações feitas em um arquivo linha por linha.
+	-> Mostra o autor e o commit em que foi feito aquela linha.
+
+	git blame <file>
+
+Git Bisect: 
+	
+	-> Entra em um modo onde faz uma busca binária pra identificar alguma diferença entre commits e depois identifica qual commit fez isso. Ver sintaxe.
